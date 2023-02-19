@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="SignInTestSuite" verbose="1">
+
+	<test name="SignInTest-successful-CH">
+		<classes>
+			<class name="com.ultimateQA.tests.testCases.signIn.SignInTest">
+			</class>
+		</classes>
+	</test>
+
+</suite>
