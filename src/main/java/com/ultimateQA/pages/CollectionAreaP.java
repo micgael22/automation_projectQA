@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 public class CollectionAreaP extends BasePageObject {
 
     private String pageUrl = "https://courses.ultimateqa.com/collections";
+
+    private String userPageUrl = "https://courses.ultimateqa.com/users";
     private By message = By.xpath("//*[@id=\"notifications\"]/div/div/div/p");
 
     public CollectionAreaP(WebDriver driver, Logger log) {
@@ -16,6 +18,10 @@ public class CollectionAreaP extends BasePageObject {
     //Get url from PageObject
     public String getPageUrl() {
         return pageUrl;
+    }
+
+    public String getUserPUrl() {
+        return userPageUrl;
     }
 
     //Return Text from success message
