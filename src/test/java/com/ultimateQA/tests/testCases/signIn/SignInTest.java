@@ -23,6 +23,11 @@ public class SignInTest extends TestUtilities {
         // Click on signIn link
         UserSignInP userSignInP = homeAutoP.loginLink();
         takeScreenshot("SignInPage opened");
+        //Get cookies
+//        String username = sCollectionAreaPage.getCookie("username");
+//        log.info("Username cookie: " + username);
+//        String session = sCollectionAreaPage.getCookie("rack.session");
+//        log.info("Session cookie: " + session);
 
         // Add new cookie
         //Cookie ck = new Cookie("username", "tom", "pageUrl", "/", null);
@@ -32,11 +37,6 @@ public class SignInTest extends TestUtilities {
         CollectionAreaP collectionAreaP = userSignInP.signIn("fisherjack@gmail.com","demo123_");
         takeScreenshot("SignIn opened");
 
-        //Get cookies
-//        String username = sCollectionAreaPage.getCookie("username");
-//        log.info("Username cookie: " + username);
-//        String session = sCollectionAreaPage.getCookie("rack.session");
-//        log.info("Session cookie: " + session);
 
         // verifications
         // new page url is expected
@@ -46,7 +46,7 @@ public class SignInTest extends TestUtilities {
         //Assert.assertTrue(sCollectionAreaPage.isLogOutButtonVisible(), "LogOut Button is not Visible");
 
         // Successful log in message
-        String expectedSuccessMessage = "Signed in successfully";
+        String expectedSuccessMessage = "Signed in successfully.";
         String actualSuccessMessage = collectionAreaP.getSuccessMessageText();
         Assert.assertTrue(actualSuccessMessage.contains(expectedSuccessMessage),
                 "actualSuccessMessage does not contain expectedSuccessMessage\nexpectedSuccessMessage: "
